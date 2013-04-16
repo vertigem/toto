@@ -5,7 +5,7 @@ require 'rack'
 require 'digest'
 require 'open-uri'
 
-if RUBY_PLATFORM =~ /win32/
+if RUBY_PLATFORM =~ /win32|java/
   require 'maruku'
   Markdown = Maruku
 else
