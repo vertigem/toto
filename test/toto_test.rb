@@ -1,3 +1,5 @@
+# encoding: UTF-8
+#
 require 'test/test_helper'
 require 'date'
 
@@ -159,6 +161,17 @@ context Toto do
       should("have an author")             { topic.author }.equals AUTHOR
       should("have a path")                { topic.path }.equals Date.today.strftime("/%Y/%m/%d/toto-and-the-wizard-of-oz/")
       should("have a url")                 { topic.url }.equals Date.today.strftime("#{URL}/%Y/%m/%d/toto-and-the-wizard-of-oz/")
+    end
+
+    context "with latin char" do
+      setup do
+        Toto::Article.new({
+          :title => "Totô & Thè Wízãrd of Oz. ç",
+        }, @config)
+      end
+
+      should("have a title")               { topic.title }.equals "Totô & Thè Wízãrd of Oz. ç"
+      should("have a slug")                { topic.slug }.equals "toto-and-the-wizard-of-oz-c"
     end
 
     context "with a user-defined summary" do
