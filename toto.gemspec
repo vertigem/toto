@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["cloudhead"]
-  s.date = "2013-04-16"
+  s.date = "2013-08-11"
   s.description = "the tiniest blog-engine in Oz."
   s.email = "self@cloudhead.net"
   s.extra_rdoc_files = [
@@ -46,11 +46,11 @@ Gem::Specification.new do |s|
   ]
   s.homepage = "http://github.com/cloudhead/toto"
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.24"
+  s.rubygems_version = "2.0.3"
   s.summary = "the tiniest blog-engine in Oz"
 
   if s.respond_to? :specification_version then
-    s.specification_version = 3
+    s.specification_version = 4
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<riot>, [">= 0"])
